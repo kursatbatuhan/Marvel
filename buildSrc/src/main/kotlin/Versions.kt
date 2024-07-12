@@ -16,4 +16,12 @@ object Versions {
         const val androidApplication = "8.1.4"
         const val jetbrainsKotlinAndroid = "1.9.0"
     }
+
+    object DI {
+        const val hilt = "2.44"
+    }
+
+    object MultiDex {
+        const val multiDex = "2.0.1"
+    }
 }

@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.androidApplication)
     id(Plugins.jetbrainsKotlinAndroid)
+    id(Plugins.kapt)
+    id(Plugins.daggerHilt)
 }
 
 android {
@@ -13,8 +15,8 @@ android {
         targetSdk = Configs.targetSdk
         versionCode = Configs.versionCode
         versionName = Configs.versionName
-
         testInstrumentationRunner = Configs.testInstrumentationRunner
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -46,4 +48,11 @@ dependencies {
     testImplementation(Dependencies.Tests.junit)
     androidTestImplementation(Dependencies.Tests.androidJunit)
     androidTestImplementation(Dependencies.Tests.espressoCore)
+
+    //DI
+    implementation(Dependencies.DI.hilt)
+    kapt(Dependencies.DI.hiltCompiler)
+
+    //MultiDex
+    implementation(Dependencies.MultiDex.multiDex)
 }
