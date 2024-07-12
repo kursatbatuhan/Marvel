@@ -27,4 +27,19 @@ object Dependencies {
             "androidx.test.espresso:espresso-core:${Versions.Tests.espressoCore}"
         }
     }
+
+    object DI {
+        val hilt by lazy {
+            "com.google.dagger:hilt-android:${Versions.DI.hilt}"
+        }
+        val hiltCompiler by lazy {
+            "com.google.dagger:hilt-compiler:${Versions.DI.hilt}"
+        }
+    }
+
+    object MultiDex {
+        val multiDex by lazy {
+            "androidx.multidex:multidex:${Versions.MultiDex.multiDex}"
+        }
+    }
 }
