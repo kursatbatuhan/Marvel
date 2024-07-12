@@ -14,7 +14,7 @@ object Versions {
 
     object Plugins {
         const val androidApplication = "8.1.4"
-        const val jetbrainsKotlinAndroid = "1.9.0"
+        const val jetbrainsKotlinAndroid = "1.7.10"
     }
 
     object DI {
