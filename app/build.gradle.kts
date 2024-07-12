@@ -57,6 +57,8 @@ dependencies {
     implementation(Dependencies.Android.appCompat)
     implementation(Dependencies.Android.materialDesign)
     implementation(Dependencies.Android.constraintLayout)
+    implementation(Dependencies.Android.androidNavigationUI)
+    implementation(Dependencies.Android.androidNavigationFragment)
 
     //Tests
     testImplementation(Dependencies.Tests.junit)

@@ -1,8 +1,7 @@
 package com.marvel
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
 import com.marvel.core.platform.BaseActivity
 import com.marvel.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -14,8 +13,12 @@ class MainActivity: BaseActivity<ActivityMainBinding, MainActivityViewModel>(
 ) {
     @SuppressLint("SetTextI18n")
     override fun onInitDataBinding() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerViewHome) as NavHostFragment
+        navController = navHostFragment.navController
+
         binding.apply {
-            activityMainHelloTv.text = "HELLO BASE ACTIVITY"
+
         }
     }
 }
