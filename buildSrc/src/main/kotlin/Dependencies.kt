@@ -18,6 +18,9 @@ object Dependencies {
         val androidNavigationUI by lazy {
             "androidx.navigation:navigation-ui-ktx:${Versions.Android.androidNavigationUI}"
         }
+        val stdlib by lazy {
+            "org.jetbrains.kotlin:kotlin-stdlib:${Versions.Plugins.jetbrainsKotlinAndroid}"
+        }
     }
 
     object Tests {
@@ -44,6 +47,12 @@ object Dependencies {
     object MultiDex {
         val multiDex by lazy {
             "androidx.multidex:multidex:${Versions.MultiDex.multiDex}"
+        }
+    }
+
+    object BottomNavigation {
+        val chipNavigationBar by lazy {
+            "com.github.ismaeldivita:chip-navigation-bar:${Versions.BottomNavigation.chipNavigationBar}"
         }
     }
 }

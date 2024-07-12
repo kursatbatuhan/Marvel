@@ -26,4 +26,8 @@ object Versions {
     object MultiDex {
         const val multiDex = "2.0.1"
     }
+
+    object BottomNavigation {
+        const val chipNavigationBar = "1.4.0"
+    }
 }

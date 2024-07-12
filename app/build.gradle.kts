@@ -59,6 +59,7 @@ dependencies {
     implementation(Dependencies.Android.constraintLayout)
     implementation(Dependencies.Android.androidNavigationUI)
     implementation(Dependencies.Android.androidNavigationFragment)
+    implementation(Dependencies.Android.stdlib)
 
     //Tests
     testImplementation(Dependencies.Tests.junit)
@@ -71,4 +72,7 @@ dependencies {
 
     //MultiDex
     implementation(Dependencies.MultiDex.multiDex)
+
+    //BottomNavigation
+    implementation(Dependencies.BottomNavigation.chipNavigationBar)
 }
