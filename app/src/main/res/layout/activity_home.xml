@@ -8,7 +8,7 @@
         android:layout_height="match_parent">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerViewHome"
+            android:id="@+id/activityMainContainerViewHome"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -16,7 +16,19 @@
             app:layout_constraintBottom_toTopOf="@+id/activityHome_bottomNavigationView"
             app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/nav_main"
-            tools:layout="@layout/fragment_main" />
+            tools:layout="@layout/fragment_characters" />
 
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/activityMainChipNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cnb_iconSize="32dp"
+            app:cnb_textAppearance="@style/TextSize24.White"
+            android:background="@drawable/nav_bar_background"
+            app:cnb_unselectedColor="@color/white"
+            app:cnb_menuResource="@menu/bottom_menu" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

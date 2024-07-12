@@ -6,4 +6,7 @@ interface Main {
 
     fun mainFragment(): Routes
     fun secondFragment(): Routes
+    fun charactersFragment(): Routes
+    fun creatorsFragment(): Routes
+    fun storiesFragment(): Routes
 }

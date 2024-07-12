@@ -2,17 +2,23 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/charactersFragment">
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.marvel.MainFragment"
-        android:label="MainFragment">
-        <deepLink app:uri="marvel://mainFragment" />
+        android:id="@+id/charactersFragment"
+        android:name="com.marvel.ui.main.characters.presenter.CharactersFragment"
+        android:label="CharactersFragment">
+        <deepLink app:uri="marvel://charactersFragment" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.marvel.SecondFragment"
-        android:label="SecondFragment">
-        <deepLink app:uri="marvel://secondFragment" />
+        android:id="@+id/storiesFragment"
+        android:name="com.marvel.ui.main.stories.presenter.StoriesFragment"
+        android:label="StoriesFragment">
+        <deepLink app:uri="marvel://storiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creatorsFragment"
+        android:name="com.marvel.ui.main.creators.presenter.CreatorsFragment"
+        android:label="CreatorsFragment">
+        <deepLink app:uri="marvel://creatorsFragment" />
     </fragment>
 </navigation>

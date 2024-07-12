@@ -15,4 +15,22 @@ class MainRoutes @Inject constructor() : Main {
             "marvel://secondFragment"
         )
     }
+
+    override fun charactersFragment(): Routes {
+        return Routes.NavDeepLink(
+            "marvel://charactersFragment"
+        )
+    }
+
+    override fun creatorsFragment(): Routes {
+        return Routes.NavDeepLink(
+            "marvel://creatorsFragment"
+        )
+    }
+
+    override fun storiesFragment(): Routes {
+        return Routes.NavDeepLink(
+            "marvel://storiesFragment"
+        )
+    }
 }

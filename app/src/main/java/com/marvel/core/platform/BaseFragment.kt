@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import com.marvel.MainActivity
 import com.marvel.core.extensions.observe
 import com.marvel.core.extensions.observeEvent
 import com.marvel.core.utils.DeepLinkKeys.FAIL
@@ -22,6 +21,7 @@ import com.marvel.core.utils.DeepLinkKeys.SUCCESS
 import com.marvel.core.utils.DeepLinkKeys.TRUSTLY
 import com.marvel.core.utils.DeepLinkKeys.key
 import com.marvel.core.utils.DeepLinkKeys.successOrFail
+import com.marvel.ui.main.home.presenter.HomePageActivity
 
 abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel>(
     @LayoutRes private val layoutId: Int,
@@ -66,7 +66,7 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel>(
     }
 
     private fun onDeepLinkEvent(event: Uri) {
-        if (activity is MainActivity) {
+        if (activity is HomePageActivity) {
             val key = event.getQueryParameter(key)
             val successOrFail = event.getQueryParameter(successOrFail)
             if (key != null) {
@@ -92,8 +92,8 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel>(
             navController = (activity as BaseActivity<*, *>).navController
         } catch (e: Exception) {
 
-            if (activity is MainActivity) {
-                navController = (activity as MainActivity).navController
+            if (activity is HomePageActivity) {
+                navController = (activity as HomePageActivity).navController
             }
         }
         onInitDataBinding()
