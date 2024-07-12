@@ -1,28 +1,28 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.androidApplication)
+    id(Plugins.jetbrainsKotlinAndroid)
 }
 
 android {
-    namespace = "com.marvel"
-    compileSdk = 34
+    namespace = Configs.applicationId
+    compileSdk = Configs.compileSdk
 
     defaultConfig {
-        applicationId = "com.marvel"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Configs.applicationId
+        minSdk = Configs.minSdk
+        targetSdk = Configs.targetSdk
+        versionCode = Configs.versionCode
+        versionName = Configs.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Configs.testInstrumentationRunner
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile(Configs.proguardAndroidOptimize),
+                Configs.proguardRules
             )
         }
     }
@@ -31,17 +31,19 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Configs.jvmTarget
     }
 }
 
 dependencies {
+    //Android
+    implementation(Dependencies.Android.androidCoreKtx)
+    implementation(Dependencies.Android.appCompat)
+    implementation(Dependencies.Android.materialDesign)
+    implementation(Dependencies.Android.constraintLayout)
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    //Tests
+    testImplementation(Dependencies.Tests.junit)
+    androidTestImplementation(Dependencies.Tests.androidJunit)
+    androidTestImplementation(Dependencies.Tests.espressoCore)
 }
