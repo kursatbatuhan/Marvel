@@ -4,6 +4,8 @@ object Versions {
         const val appCompat = "1.7.0"
         const val materialDesign = "1.12.0"
         const val constraintLayout = "2.1.4"
+        const val androidNavigationFragment = "2.7.7"
+        const val androidNavigationUI = "2.7.7"
     }
 
     object Tests {

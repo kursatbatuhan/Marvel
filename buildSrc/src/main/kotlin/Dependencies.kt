@@ -1,5 +1,3 @@
-import org.gradle.api.artifacts.dsl.DependencyHandler
-
 object Dependencies {
     object Android {
         val androidCoreKtx by lazy {
@@ -13,6 +11,12 @@ object Dependencies {
         }
         val constraintLayout by lazy {
             "androidx.constraintlayout:constraintlayout:${Versions.Android.constraintLayout}"
+        }
+        val androidNavigationFragment by lazy {
+            "androidx.navigation:navigation-fragment-ktx:${Versions.Android.androidNavigationFragment}"
+        }
+        val androidNavigationUI by lazy {
+            "androidx.navigation:navigation-ui-ktx:${Versions.Android.androidNavigationUI}"
         }
     }
 
