@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890300796265",
+    "project_id": "marvel-app-494cb",
+    "storage_bucket": "marvel-app-494cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890300796265:android:3e7975574b2cb009d041f8",
+        "android_client_info": {
+          "package_name": "com.marvel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9K1TMbXDd7R5TPpwbshfyLkwzFLfTtsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
