@@ -41,13 +41,18 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        compose = true
     }
+
     kapt {
         correctErrorTypes = true
         useBuildCache = true
     }
     kotlinOptions {
         jvmTarget = Configs.jvmTarget
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.1"
     }
 }
 
@@ -60,6 +65,16 @@ dependencies {
     implementation(Dependencies.Android.androidNavigationUI)
     implementation(Dependencies.Android.androidNavigationFragment)
     implementation(Dependencies.Android.stdlib)
+
+    //Compose
+    api(Dependencies.Android.composeBom)
+    api(Dependencies.Android.compose)
+    api(Dependencies.Android.composeFoundation)
+    api(Dependencies.Android.composeMaterial)
+    api(Dependencies.Android.composeConstraintLayout)
+    debugApi(Dependencies.Android.composeTooling)
+    debugApi(Dependencies.Android.composeToolingData)
+    api(Dependencies.Android.composeToolingPreview)
 
     //Tests
     testImplementation(Dependencies.Tests.junit)
@@ -75,4 +90,11 @@ dependencies {
 
     //BottomNavigation
     implementation(Dependencies.BottomNavigation.chipNavigationBar)
+
+    // Network
+    implementation(Dependencies.Network.gson)
+    implementation(Dependencies.Network.gsonAdapter)
+    implementation(Dependencies.Network.retrofit)
+    implementation(Dependencies.Network.okHttp)
+    implementation(Dependencies.Network.loggingInterceptor)
 }

@@ -16,11 +16,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import com.marvel.core.extensions.observe
 import com.marvel.core.extensions.observeEvent
-import com.marvel.core.utils.DeepLinkKeys.FAIL
-import com.marvel.core.utils.DeepLinkKeys.SUCCESS
-import com.marvel.core.utils.DeepLinkKeys.TRUSTLY
-import com.marvel.core.utils.DeepLinkKeys.key
-import com.marvel.core.utils.DeepLinkKeys.successOrFail
+import com.marvel.core.utils.Constants.DeepLinkKeys.FAIL
+import com.marvel.core.utils.Constants.DeepLinkKeys.SUCCESS
+import com.marvel.core.utils.Constants.DeepLinkKeys.TRUSTLY
+import com.marvel.core.utils.Constants.DeepLinkKeys.key
+import com.marvel.core.utils.Constants.DeepLinkKeys.successOrFail
 import com.marvel.ui.main.home.presenter.HomePageActivity
 
 abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel>(

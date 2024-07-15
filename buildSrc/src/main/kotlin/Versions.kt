@@ -6,6 +6,8 @@ object Versions {
         const val constraintLayout = "2.1.4"
         const val androidNavigationFragment = "2.7.7"
         const val androidNavigationUI = "2.7.7"
+        const val compose = "1.3.1"
+        const val composeConstraintLayout = "1.0.0"
     }
 
     object Tests {
@@ -29,5 +31,15 @@ object Versions {
 
     object BottomNavigation {
         const val chipNavigationBar = "1.4.0"
+    }
+
+    object Network {
+        const val conscrypt = "2.5.1"
+        const val gson = "2.8.7"
+        const val retrofit = "2.9.0"
+        const val rxJava3Adapter = retrofit
+        const val gsonConverter = retrofit
+        const val okHttp = "5.0.0-alpha.5"
+        const val loggingInterceptor = okHttp
     }
 }
