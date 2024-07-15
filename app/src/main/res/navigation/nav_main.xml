@@ -21,4 +21,10 @@
         android:label="CreatorsFragment">
         <deepLink app:uri="marvel://creatorsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.marvel.ui.main.details.presenter.DetailsFragment"
+        android:label="DetailsFragment">
+        <deepLink app:uri="marvel://detailsFragment?data={data}" />
+    </fragment>
 </navigation>

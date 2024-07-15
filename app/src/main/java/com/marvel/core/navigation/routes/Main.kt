@@ -1,12 +1,12 @@
 package com.marvel.core.navigation.routes
 
 import com.marvel.core.navigation.Routes
+import com.marvel.data.cachedatamodel.CharacterCacheDataModel
 
 interface Main {
 
-    fun mainFragment(): Routes
-    fun secondFragment(): Routes
     fun charactersFragment(): Routes
     fun creatorsFragment(): Routes
     fun storiesFragment(): Routes
+    fun detailsFragment(data: CharacterCacheDataModel): Routes
 }

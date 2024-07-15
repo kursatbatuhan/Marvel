@@ -97,4 +97,7 @@ dependencies {
     implementation(Dependencies.Network.retrofit)
     implementation(Dependencies.Network.okHttp)
     implementation(Dependencies.Network.loggingInterceptor)
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }

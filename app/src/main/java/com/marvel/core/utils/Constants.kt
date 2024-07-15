@@ -28,5 +28,9 @@ class Constants {
     object StringParameter {
         const val EMPTY_STRING = ""
         const val UNEXPECTED_ERROR = "An Unexpected Error"
+        const val DOT = "."
+        const val NO_INFO = "There is no information about him. He lives in legends"
+        const val IMAGE_NOT_AVAILABLE = "image_not_available"
+        const val MARVEL_LOGO_URL = "https://motocupid.com/wp-content/uploads/2022/06/MARVEL.jpg"
     }
 }

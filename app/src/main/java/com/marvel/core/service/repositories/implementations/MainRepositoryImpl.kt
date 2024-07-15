@@ -6,8 +6,12 @@ import com.marvel.data.characters.Character
 import javax.inject.Inject
 
 class MainRepositoryImpl @Inject constructor(private val apiManager: ApiManager): MainRepository {
-    override suspend fun getAllCharacters(offset:Int): Character {
-        return apiManager.getAllCharacters(offset=offset.toString())
+    override suspend fun getAllCharacters(offset: Int): Character {
+        return apiManager.getAllCharacters(offset = offset.toString())
+    }
+
+    override suspend fun getCharacterById(id: String): Character {
+        return apiManager.getCharacterById(id)
     }
 
 }
