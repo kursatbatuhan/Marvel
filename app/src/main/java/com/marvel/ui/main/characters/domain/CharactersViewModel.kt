@@ -1,9 +1,11 @@
 package com.marvel.ui.main.characters.domain
 
 import androidx.lifecycle.viewModelScope
+import com.marvel.core.platform.BaseViewEvent
 import com.marvel.core.platform.BaseViewModel
 import com.marvel.core.utils.BaseResponse
 import com.marvel.core.utils.Constants.StringParameter.UNEXPECTED_ERROR
+import com.marvel.data.cachedatamodel.CharacterCacheDataModel
 import com.marvel.data.states.CharactersListState
 import com.marvel.data.usecases.CharactersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,5 +40,13 @@ class CharactersViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    fun redirectToDetailsFragment(characterCacheDataModel: CharacterCacheDataModel) {
+        sendEvent(
+            BaseViewEvent.Navigation(
+                routes = mainRoute.detailsFragment(characterCacheDataModel)
+            )
+        )
     }
 }

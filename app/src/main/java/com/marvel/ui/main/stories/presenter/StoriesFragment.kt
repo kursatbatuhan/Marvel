@@ -3,6 +3,7 @@ package com.marvel.ui.main.stories.presenter
 import com.marvel.R
 import com.marvel.core.platform.BaseFragment
 import com.marvel.databinding.FragmentStoriesBinding
+import com.marvel.ui.components.NoResult
 import com.marvel.ui.main.stories.domain.StoriesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -13,7 +14,9 @@ class StoriesFragment: BaseFragment<FragmentStoriesBinding, StoriesViewModel>(
 ) {
     override fun onInitDataBinding() {
        binding.apply {
-           fragmentStoriesTv.text = "STORIES"
+           fragmentStoriesCv.setContent {
+               NoResult(imageResId = R.drawable.ic_avengers, text = R.string.coming_soon)
+           }
        }
     }
 }

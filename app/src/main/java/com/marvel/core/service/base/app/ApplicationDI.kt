@@ -24,6 +24,11 @@ class ApplicationDI: Application() {
         @JvmField
         var appInstance: ApplicationDI? = null
 
+        @JvmStatic
+        fun getAppInstance(): ApplicationDI {
+            return appInstance as ApplicationDI
+        }
+
         lateinit var appContext: Context
     }
 }

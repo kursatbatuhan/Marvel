@@ -48,5 +48,10 @@ abstract class BaseActivity<DB: ViewDataBinding, VM: BaseViewModel>(
 
     abstract fun onInitDataBinding()
 
+    fun popBack(count: Int) {
+        for (i in (1..count))
+            navController.popBackStack()
+    }
+
     lateinit var navController: NavController
 }

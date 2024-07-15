@@ -48,6 +48,12 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel>(
         }
     }
 
+    fun popBack(count: Int = 1) {
+        when (activity) {
+            is HomePageActivity -> (activity as HomePageActivity).popBack(count)
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
