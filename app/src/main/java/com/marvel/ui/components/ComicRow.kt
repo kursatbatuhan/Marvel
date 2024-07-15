@@ -55,7 +55,6 @@ fun ComicRow(year: Int, hashTag: String?, titleWithoutHashTag: String) {
 
 @Composable
 fun ComicList(comics: List<String>) {
-    // Verileri ayrıştır
     val parsedComics = comics.mapNotNull { comic ->
         val yearRegex = "\\((\\d{4})\\)".toRegex()
         val matchResult = yearRegex.find(comic)
@@ -74,12 +73,16 @@ fun ComicList(comics: List<String>) {
             null
         }
     }.sortedByDescending { it.first }
-    if (parsedComics.isEmpty()) {
+
+    val top10Comics = parsedComics.take(10)
+
+    if (top10Comics.isEmpty()) {
         NoResult(imageResId = R.drawable.ic_avengers, text = R.string.no_comics_info)
     }
     Column {
-        parsedComics.forEach { (year, hashTag, titleWithoutHashTag) ->
+        top10Comics.forEach { (year, hashTag, titleWithoutHashTag) ->
             ComicRow(year, hashTag, titleWithoutHashTag)
         }
     }
 }
+

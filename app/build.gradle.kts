@@ -3,6 +3,7 @@ plugins {
     id(Plugins.jetbrainsKotlinAndroid)
     id(Plugins.kapt)
     id(Plugins.daggerHilt)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -100,4 +101,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
     implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation("com.google.firebase:firebase-analytics:21.2.0")
+
 }
